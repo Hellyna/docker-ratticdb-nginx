@@ -21,7 +21,7 @@ nginx_conf_path='/etc/nginx/conf.d/rattic.conf'
 
 cat > "$nginx_conf_path" <<EOF
 upstream rattic {
-  server ${UWSGI_PORT_8000_TCP_ADDR}:${UWSGI_PORT_8000_TCP_PORT};
+  server ${uwsgi_host}:${uwsgi_port};
 }
 
 server {
